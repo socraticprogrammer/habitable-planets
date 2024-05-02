@@ -1,7 +1,16 @@
 import { createReadStream } from "fs";
 import { parse } from "csv-parse";
 
-const records = [];
+const habitablePlanets = [];
+
+function isHabitablePlanet({ koi_disposition, koi_insol, koi_prad }) {
+  return (
+    koi_disposition === "CONFIRMED" &&
+    koi_insol > 0.36 &&
+    koi_insol < 1.11 &&
+    koi_prad < 1.6
+  );
+}
 
 createReadStream("kepler_data.csv")
   .pipe(
@@ -11,12 +20,13 @@ createReadStream("kepler_data.csv")
     })
   )
   .on("data", (chunk) => {
-    records.push(chunk);
+    if (isHabitablePlanet(chunk)) {
+      habitablePlanets.push(chunk);
+    }
   })
   .on("error", (err) => {
     console.error(err);
   })
   .on("end", () => {
-    console.info("There will be no more data.");
-    console.log(records);
+    console.info(`${habitablePlanets.length} habitable planets found!`);
   });
