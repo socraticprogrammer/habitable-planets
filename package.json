@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/socraticprogrammer/habitable-planets/issues"
   },
-  "homepage": "https://github.com/socraticprogrammer/habitable-planets#readme"
+  "homepage": "https://github.com/socraticprogrammer/habitable-planets#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
 }
