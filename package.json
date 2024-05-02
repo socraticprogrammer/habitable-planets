@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/socraticprogrammer/habitable-planets#readme",
   "dependencies": {
-    "csv-parser": "^3.0.0"
+    "csv-parse": "^5.5.5"
   }
 }
