@@ -1,0 +1,27 @@
+{
+  "name": "habitable-planets",
+  "version": "1.0.0",
+  "description": "Find habitable planets based on Kepler Mission",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socraticprogrammer/habitable-planets.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Thalles Lossurdo",
+    "url": "https://github.com/socraticprogrammer",
+    "email": "thallesgabriel1307@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/socraticprogrammer/habitable-planets/issues"
+  },
+  "homepage": "https://github.com/socraticprogrammer/habitable-planets#readme",
+  "dependencies": {
+    "csv-parse": "^5.5.5"
+  }
+}
